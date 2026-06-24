@@ -93,7 +93,7 @@ Here are some explanation of parameters:
     
 
 # :scroll: Citation
-Please cite the following paper if you use the toolbox and cite the corresponding papers for the datasets.
+Please cite the following paper if you use the toolbox and <u>cite the corresponding papers for the datasets</u>.
 
 ```
 @article{liu2022rppg,
