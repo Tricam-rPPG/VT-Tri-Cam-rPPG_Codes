@@ -1,6 +1,3 @@
-<p align="center">
-:fire: If you have any questions or concerns, please create an <a href="https://github.com/ubicomplab/rPPG-Toolbox/issues">issue</a> :memo:! :fire:
-</p>
 
 # :wave: Introduction
 
