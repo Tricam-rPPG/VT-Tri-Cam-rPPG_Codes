@@ -94,7 +94,7 @@ Here are some explanation of parameters:
     
 
 # :scroll: Citation
-If you find our [paper](https://arxiv.org/abs/2210.00716) or this toolbox useful for your research, please cite our work.
+Please cite the following paper if you use the toolbox and cite the corresponding papers for the datasets.
 
 ```
 @article{liu2022rppg,
