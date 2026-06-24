@@ -3,7 +3,6 @@
 
 **rPPG-Toolbox** is an open-source platform designed for camera-based physiological sensing, also known as remote photoplethysmography (rPPG). 
 
-rPPG-Toolbox not only benchmarks the **existing state-of-the-art neural and unsupervised methods**, but it also supports flexible and rapid development of your own algorithms.
 ![Overview of the toolbox](./figures/toolbox_overview.png)
 
 # :wrench: Setup
