@@ -23,8 +23,9 @@ VT-Tri-Cam-rPPG can be used in conjunction with the [rPPG-toolbox](https://githu
 
 ## 🗝️ Access and Usage
 **This dataset is built for academic use. Any commercial usage is banned.**  
-
-< Add links and instructions for how to request access>
+Tricam-rPPG is intended for research use under a data use license. The release includes synchronized camera recordings, PPG waveforms, Aria subset data, landmarks, skin maps, pulse landmarks, and patch intensity signals.
+Because the dataset contains human-subject data, access is provided only after execution of a Data Use License (DUL). To request access, please email Abhijit Sarkar and Lynn Abbott. The DUL and access instructions will be sent to approved research requesters.
+Please send an email to these email IDs: asarkar@vtti.vt.edu and abbott@vt.edu.
 
 :computer: Please look in the `rppg-Toolbox_VTTriCam` directory for examples on how to use the dataset via the rPPG-Toolbox.
 
@@ -32,5 +33,5 @@ VT-Tri-Cam-rPPG can be used in conjunction with the [rPPG-toolbox](https://githu
 ## 📄 Citation
 
 # Acknowledgement 
-The team would like to thank Fulan Li, Zeeshan karamat, Gayatri Bhatambarekar, Jin Woo Baik, Joe Bekiranov, Ayush Sadekar, Calvin Winkowski, Ryan Talbot for their support during the data collection. 
+We thank Ryan Mowri and Ryan Talbot from VTTI for helping with the hardware setup. We thank Gayatri Bhatambarekar, Joe Bekaronov, Jin Woo Baik, and Zeeshan Muhammad Karamat for additional help with data collection. Finally, we thank all the wonderful participants for taking part in the study.
 This work was partially funded by National Science Foundation, and Commonwealth of Cyber Initiative at Virginia, USA. 
