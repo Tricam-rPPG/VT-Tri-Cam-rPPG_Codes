@@ -13,10 +13,11 @@ VT-Tri-Cam-rPPG can be used in conjunction with the [rPPG-toolbox](https://githu
          |   |-- PARTICIPANT301_S1_T1_850.mp4/
          |   |-- PARTICIPANT301_S1_T1_940.mp4/
          |   |-- PARTICIPANT301_S1_T1_RGB.mp4/
+         |   |-- PARTICIPANT301_S1_T1.csv/
          |   |-- PARTICIPANT301_S1_T2_850.mp4/
          |   |-- PARTICIPANT301_S1_T2_940.mp4/
          |   |-- PARTICIPANT301_S1_T2_RGB.mp4/
-         |   |-- PARTICIPANT301_S1_T1.csv/
+         |   |-- PARTICIPANT301_S1_T2.csv/
 
     -----------------
 
