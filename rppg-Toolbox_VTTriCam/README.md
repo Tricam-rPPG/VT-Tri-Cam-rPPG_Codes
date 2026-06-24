@@ -9,266 +9,6 @@
 rPPG-Toolbox not only benchmarks the **existing state-of-the-art neural and unsupervised methods**, but it also supports flexible and rapid development of your own algorithms.
 ![Overview of the toolbox](./figures/toolbox_overview.png)
 
-
-# :file_folder: Datasets
-The toolbox supports eight datasets, namely VT-Tri-Cam-rPPG, SCAMPS, UBFC-rPPG, PURE, BP4D+, UBFC-Phys, MMPD and iBVP. Please cite the corresponding papers when using these datasets. For now, we recommend training with UBFC-rPPG, PURE, iBVP or SCAMPS due to the level of synchronization and volume of the datasets. **To use these datasets in a deep learning model, you should organize the files as follows.**
-* [MMPD](https://github.com/McJackTang/MMPD_rPPG_dataset)
-    * Jiankai Tang, Kequan Chen, Yuntao Wang, Yuanchun Shi, Shwetak Patel, Daniel McDuff, Xin Liu, "MMPD: Multi-Domain Mobile Video Physiology Dataset", IEEE EMBC, 2023
-    -----------------
-         data/MMPD/
-         |   |-- subject1/
-         |       |-- p1_0.mat
-         |       |-- p1_1.mat
-         |       |...
-         |       |-- p1_19.mat
-         |   |-- subject2/
-         |       |-- p2_0.mat
-         |       |-- p2_1.mat
-         |       |...
-         |...
-         |   |-- subjectn/
-         |       |-- pn_0.mat
-         |       |-- pn_1.mat
-         |       |...
-    -----------------
-    
-* [SCAMPS](https://arxiv.org/abs/2206.04197)
-    * D. McDuff, M. Wander, X. Liu, B. Hill, J. Hernandez, J. Lester, T. Baltrusaitis, "SCAMPS: Synthetics for Camera Measurement of Physiological Signals", NeurIPS, 2022
-    -----------------
-         data/SCAMPS/Train/
-            |-- P00001.mat
-            |-- P00002.mat
-         |...
-         data/SCAMPS/Val/
-            |-- P00001.mat
-            |-- P00002.mat
-         |...
-         data/SCAMPS/Test/
-            |-- P00001.mat
-            |-- P00002.mat
-         |...
-    -----------------
-
-* [UBFC-rPPG](https://sites.google.com/view/ybenezeth/ubfcrppg)
-    * S. Bobbia, R. Macwan, Y. Benezeth, A. Mansouri, J. Dubois, "Unsupervised skin tissue segmentation for remote photoplethysmography", Pattern Recognition Letters, 2017.
-    -----------------
-         data/UBFC-rPPG/
-         |   |-- subject1/
-         |       |-- vid.avi
-         |       |-- ground_truth.txt
-         |   |-- subject2/
-         |       |-- vid.avi
-         |       |-- ground_truth.txt
-         |...
-         |   |-- subjectn/
-         |       |-- vid.avi
-         |       |-- ground_truth.txt
-    -----------------
-   
-* [PURE](https://www.tu-ilmenau.de/universitaet/fakultaeten/fakultaet-informatik-und-automatisierung/profil/institute-und-fachgebiete/institut-fuer-technische-informatik-und-ingenieurinformatik/fachgebiet-neuroinformatik-und-kognitive-robotik/data-sets-code/pulse-rate-detection-dataset-pure)
-    * Stricker, R., Müller, S., Gross, H.-M.Non-contact "Video-based Pulse Rate Measurement on a Mobile Service Robot"
-in: Proc. 23st IEEE Int. Symposium on Robot and Human Interactive Communication (Ro-Man 2014), Edinburgh, Scotland, UK, pp. 1056 - 1062, IEEE 2014
-    -----------------
-         data/PURE/
-         |   |-- 01-01/
-         |      |-- 01-01/
-         |      |-- 01-01.json
-         |   |-- 01-02/
-         |      |-- 01-02/
-         |      |-- 01-02.json
-         |...
-         |   |-- ii-jj/
-         |      |-- ii-jj/
-         |      |-- ii-jj.json
-    -----------------
-    
-* [BP4D+](https://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html)
-    * Zhang, Z., Girard, J., Wu, Y., Zhang, X., Liu, P., Ciftci, U., Canavan, S., Reale, M., Horowitz, A., Yang, H., Cohn, J., Ji, Q., Yin, L. "Multimodal Spontaneous Emotion Corpus for Human Behavior Analysis", IEEE International Conference on Computer Vision and Pattern Recognition (CVPR) 2016.   
-    -----------------
-        RawData/
-         |   |-- 2D+3D/
-         |       |-- F001.zip/
-         |       |-- F002.zip
-         |       |...
-         |   |-- 2DFeatures/
-         |       |-- F001_T1.mat
-         |       |-- F001_T2.mat
-         |       |...
-         |   |-- 3DFeatures/
-         |       |-- F001_T1.mat
-         |       |-- F001_T2.mat
-         |       |...
-         |   |-- AUCoding/
-         |       |-- AU_INT/
-         |            |-- AU06/
-         |               |-- F001_T1_AU06.csv
-         |               |...
-         |           |...
-         |       |-- AU_OCC/
-         |           |-- F00_T1.csv 
-         |           |...
-         |   |-- IRFeatures/
-         |       |-- F001_T1.txt
-         |       |...
-         |   |-- Physiology/
-         |       |-- F001/
-         |           |-- T1/
-         |               |-- BP_mmHg.txt
-         |               |-- microsiemens.txt
-         |               |--LA Mean BP_mmHg.txt
-         |               |--LA Systolic BP_mmHg.txt
-         |               |-- BP Dia_mmHg.txt
-         |               |-- Pulse Rate_BPM.txt
-         |               |-- Resp_Volts.txt
-         |               |-- Respiration Rate_BPM.txt
-         |       |...
-         |   |-- Thermal/
-         |       |-- F001/
-         |           |-- T1.mv
-         |           |...
-         |       |...
-         |   |-- BP4D+UserGuide_v0.2.pdf
-    -----------------
-
-* [UBFC-Phys](https://sites.google.com/view/ybenezeth/ubfc-phys)
-    * Sabour, R. M., Benezeth, Y., De Oliveira, P., Chappe, J., & Yang, F. (2021). Ubfc-phys: A multimodal database for psychophysiological studies of social stress. IEEE Transactions on Affective Computing.  
-    -----------------
-          RawData/
-          |   |-- s1/
-          |       |-- vid_s1_T1.avi
-          |       |-- vid_s1_T2.avi
-          |       |...
-          |       |-- bvp_s1_T1.csv
-          |       |-- bvp_s1_T2.csv
-          |   |-- s2/
-          |       |-- vid_s2_T1.avi
-          |       |-- vid_s2_T2.avi
-          |       |...
-          |       |-- bvp_s2_T1.csv
-          |       |-- bvp_s2_T2.csv
-          |...
-          |   |-- sn/
-          |       |-- vid_sn_T1.avi
-          |       |-- vid_sn_T2.avi
-          |       |...
-          |       |-- bvp_sn_T1.csv
-          |       |-- bvp_sn_T2.csv
-    -----------------
-
-* [iBVP](https://github.com/PhysiologicAILab/iBVP-Dataset)
-    * Joshi, J.; Cho, Y. iBVP Dataset: RGB-Thermal rPPG Dataset with High Resolution Signal Quality Labels. Electronics 2024, 13, 1334.
-    -----------------
-          iBVP_Dataset/
-          |   |-- p01_a/
-          |      |-- p01_a_rgb/
-          |      |-- p01_a_t/
-          |      |-- p01_a_bvp.csv
-          |   |-- p01_b/
-          |      |-- p01_b_rgb/
-          |      |-- p01_b_t/
-          |      |-- p01_b_bvp.csv
-          |...
-          |   |-- pii_x/
-          |      |-- pii_x_rgb/
-          |      |-- pii_x_t/
-          |      |-- pii_x_bvp.csv
-    -----------------
-
-  * [PhysDrive](https://github.com/WJULYW/PhysDrive-Dataset)
-    * Jiyao Wang, Xiao Yang, Qingyong Hu, Jiankai Tang, Can Liu, Dengbo He, Yuntao Wang, Ying-Cong Chen, Kaishun Wu. （2025） PhysDrive: A Multimodal Remote Physiological Measurement Dataset for In-vehicle Driver Monitoring
-    -----------------
-         On-Road-rPPG/
-         |   |-- AFH1/
-         |      |-- A1/
-         |          |-- Align/
-         |              |-- ...png
-         |          |-- Label/
-         |              |-- BVP.mat
-         |              |-- ECG.mat
-         |              |-- RESP.mat
-         |              |-- SPO2.mat
-         |      |-- A2/...
-         |      |-- B1/...
-         |      |-- B2/...
-         |      |-- C1/...
-         |      |-- C2/...
-         |   |-- AFH2/
-         |...
-         |   |-- CMZ2/
-    -----------------
-
-* [SUMS](https://github.com/thuhci/SUMS/)
-    * Ke Liu*, Jiankai Tang*(*Co-first Author), Zhang Jiang, Yuntao Wang, Xiaojing Liu, Dong Li, Yuanchun Shi, "Summit Vitals: Multi-Camera and Multi-Signal Biosensing at High Altitudes", IEEE UIC, 2024
-    -----------------
-        data/SUMS/
-        |   |-- 060200/
-        |       |-- v01
-        |           |-- BVP.csv
-        |           |-- frames_timestamp.csv
-        |           |-- HR.csv
-        |           |-- RR.csv
-        |           |-- video_ZIP_H264_face.avi
-        |           |-- video_ZIP_H264_finger.avi
-        |       |-- v02
-        |       |-- v03
-        |       |-- v04
-        |   |-- 060201/
-        |       |-- v01
-        |       |-- v02
-        |       |...
-        |...
-        |   |-- 0602mn/
-        |       |-- v01
-        |       |-- v02
-        |       |...
-    -----------------
-
-* [LADH](https://github.com/McJackTang/FusionVitals/)
-    * Xulin Ma, Jiankai Tang, Zhang Jiang, Songqin Cheng, Yuanchun Shi, Dong Li, Xin Liu, Daniel Mcduff, Xiaojing Liu, Yuntao Wang, "Non-Contact Health Monitoring During Daily Personal Care Routines", IEEE-EMBS BSN, 2025
-    -----------------
-        data/LADH/
-        |   |-- 12_05/
-        |       |-- p_12_05_caip
-        |           |-- v01
-        |               |-- BVP.csv
-        |               |-- HR.csv
-        |               |-- RR.csv
-        |               |-- SpO2.csv
-        |               |-- frames_timestamp_IR.csv
-        |               |-- frames_timestamp_RGB.csv
-        |               |-- video_RGB_H264.avi
-        |               |-- video_IR_H264.avi
-        |           |-- v02
-        |           |-- v03
-        |           |-- v04
-        |           |-- v05
-        |       |-- p_12_05_huangxj
-        |           |-- v01
-        |               |-- ...
-        |           |-- v02
-        |           |-- v03
-        |           |-- v04
-        |           |-- v05
-        |       |-- p_12_05_liutj
-        |       |-- p_12_05_lujg
-        |       |-- ...
-        |   |-- 12_06/
-        |       |-- p_12_06_caip
-        |       |-- p_12_06_huangxj
-        |       |-- p_12_06_liutj
-        |       |-- p_12_06_lujg
-        |       |...
-        |   |-- ...
-        |   
-        |  
-    -----------------
-
-## :bar_chart: Benchmarks
-
-The table shows  Mean Absolute Error (MAE) and Mean Absolute Percent Error (MAPE) performance across all the algorithms and datasets:
-
-![The overview of the results](./figures/results.png)
-
 # :wrench: Setup
 
 You can use either [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or [`uv`](https://docs.astral.sh/uv/getting-started/installation/) with this toolbox. Most users are already familiar with `conda`, but `uv` may be a bit less familiar - check out some highlights about `uv` [here](https://docs.astral.sh/uv/#highlights). If you use `uv`, it's highly recommended you do so independently of `conda`, meaning you should make sure you're not installing anything in the base `conda` environment or any other `conda` environment. If you're having trouble making sure you're not in your base `conda` environment, try setting `conda config --set auto_activate_base false`.
@@ -285,73 +25,33 @@ If you use Windows or other operating systems, consider using [Windows Subsystem
 
 Please use config files under `./configs/infer_configs`
 
-For example, if you want to run The model trained on PURE and tested on UBFC-rPPG, use `python main.py --config_file ./configs/infer_configs/PURE_UBFC-rPPG_TSCAN_BASIC.yaml`
+For example, if you want to run the TSCAN model trained on PURE and tested on VT-Tri-Cam-rPPG, use `python main.py --config_file ./configs/infer_configs/PURE_VTTriCam_TSCAN.yaml`
 
-If you want to test unsupervised signal processing  methods, you can use `python main.py --config_file ./configs/infer_configs/UBFC-rPPG_UNSUPERVISED.yaml`
+If you want to test unsupervised signal processing  methods, you can use `python main.py --config_file ./configs/infer_configs/VTTricam_UNSUPERVISED.yaml`
 
 # :computer: Examples of Neural Network Training
 
 Please use config files under `./configs/train_configs`
 
-## Training on PURE and Testing on UBFC-rPPG With TSCAN 
+## Training on VT-Tri-Cam-rPPG and Testing on UBFC-rPPG With DEEPPHYS 
 
-STEP 1: Download the PURE raw data by asking the [paper authors](https://www.tu-ilmenau.de/universitaet/fakultaeten/fakultaet-informatik-und-automatisierung/profil/institute-und-fachgebiete/institut-fuer-technische-informatik-und-ingenieurinformatik/fachgebiet-neuroinformatik-und-kognitive-robotik/data-sets-code/pulse-rate-detection-dataset-pure).
+STEP 1: Download the VT-Tri-Cam-rPPG dataset.
 
-STEP 2: Download the UBFC-rPPG raw data via [link](https://sites.google.com/view/ybenezeth/ubfcrppg)
+STEP 2: Download the UBFC-rPPG datset.
 
-STEP 3: Modify `./configs/train_configs/PURE_PURE_UBFC-rPPG_TSCAN_BASIC.yaml` 
+STEP 3: Modify `./configs/train_configs/VTTriCam_VTTriCam_PURE_DEEPPHYS_train.yaml` 
 
-STEP 4: Run `python main.py --config_file ./configs/train_configs/PURE_PURE_UBFC-rPPG_TSCAN_BASIC.yaml` 
-
-Note 1: Preprocessing requires only once; thus turn it off on the yaml file when you train the network after the first time. 
-
-Note 2: The example yaml setting will allow 80% of PURE to train and 20% of PURE to valid. 
-After training, it will use the best model(with the least validation loss) to test on UBFC-rPPG.
-
-## Training on SCAMPS and testing on UBFC-rPPG With DeepPhys
-
-STEP 1: Download the SCAMPS via this [link](https://github.com/danmcduff/scampsdataset) and split it into train/val/test folders.
-
-STEP 2: Download the UBFC-rPPG via [link](https://sites.google.com/view/ybenezeth/ubfcrppg)
-
-STEP 3: Modify `./configs/train_configs/SCAMPS_SCAMPS_UBFC-rPPG_DEEPPHYS_BASIC.yaml` 
-
-STEP 4: Run `python main.py --config_file ./configs/train_configs/SCAMPS_SCAMPS_UBFC-rPPG_DEEPPHYS_BASIC.yaml`
+STEP 4: Run `python main.py --config_file ./configs/train_configs/VTTriCam_VTTriCam_PURE_DEEPPHYS_train.yaml` 
 
 Note 1: Preprocessing requires only once; thus turn it off on the yaml file when you train the network after the first time. 
 
-Note 2: The example yaml setting will allow 80% of SCAMPS to train and 20% of SCAMPS to valid. 
+Note 2: The example yaml setting will allow 80% of VT-Tri-Cam to train and 20% of VT-Tri-Cam to valid. 
 After training, it will use the best model(with the least validation loss) to test on UBFC-rPPG.
+
 
 # :zap: Inference With Unsupervised Methods 
+Run `python main.py --config_file ./configs/infer_configs/VTTricam_UNSUPERVISED.yaml`
 
-STEP 1: Download the UBFC-rPPG via [link](https://sites.google.com/view/ybenezeth/ubfcrppg)
-
-STEP 2: Modify `./configs/infer_configs/UBFC_UNSUPERVISED.yaml` 
-
-STEP 3: Run `python main.py --config_file ./configs/infer_configs/UBFC_UNSUPERVISED.yaml`
-
-# :eyes: Visualization of Preprocessed Data
-A python notebook for visualizing preprocessed data can be found in `tools/preprocessing_viz` along with an associated README. The notebook, `viz_preprocessed_data.ipynb`, automatically detects the preprocessed data format and then plots input image examples and waveforms. 
-![Data Visualization Example](./tools/preprocessing_viz/preprocessing_viz_example.png)
-
-# :chart_with_downwards_trend: Plots of Training Losses and LR
-
-This toolbox saves plots of training, and if applicable, validation losses automatically. Plots are saved in `LOG.PATH` (`runs/exp` by default). An example of these plots when training and validating with the UBFC-rPPG dataset and testing on the PURE dataset are shown below.
-
-<img src="./figures/example_losses_plot.png" alt="drawing" width="600"/>
-<img src="./figures/example_lr_schedule_plot.png" alt="drawing" width="400"/>
-
-# :straight_ruler: Bland-Altman Plots
-
-By default, this toolbox produces Bland-Altman plots as a part of its metrics evaluation process for both supervised and unsupervised methods. These plots are saved in the `LOG.PATH` (`runs/exp` by default). An example of these plots after training and validating with the UBFC-rPPG dataset and testing on the PURE dataset are shown below.
-
-<img src="./figures/example_scatter_plot.png" alt="drawing" width="450"/> <img src="./figures/example_difference_plot.png" alt="drawing" width="450"/>
-
-# :eyes: Visualization of Neural Method Predictions
-
-A python notebook for visualizing test-set neural method output predictions and labels can be found in `tools/output_signal_viz` along with an associated README. The notebook, `data_out_viz.ipynb`, given a `.pickle` output file, generated by setting `TEST.OUTPUT_SAVE_DIR` assists in plotting predicted PPG signals against ground-truth PPG signals.
-![Prediction Visualization Example](./tools/output_signal_viz/sample_model_output_viz.png)
 
 # :scroll: YAML File Setting
 The rPPG-Toolbox uses yaml file to control all parameters for training and evaluation. 
@@ -395,72 +95,6 @@ Here are some explanation of parameters:
   * `USE_SMALLER_WINDOW`: If `True`, use an evaluation window smaller than the video length for evaluation.
 
     
-# :open_file_folder: Adding a New Dataset
-
-* STEP 1: Create a new python file in `dataset/data_loader`, e.g. MyLoader.py
-
-* STEP 2: Implement the required functions, including:
-
-  ```python
-  def preprocess_dataset(self, config_preprocess):
-  ```
-  ```python
-  @staticmethod
-  def read_video(video_file):
-  ```
-  ```python
-  @staticmethod
-  def read_wave(bvp_file):
-  ```
-
-* STEP 3:[Optional] Override optional functions. In principle, all functions in BaseLoader can be override, but we **do not** recommend you to override *\_\_len\_\_, \_\_get\_item\_\_,save,load*.
-* STEP 4:Set or add configuration parameters.  To set paramteters, create new yaml files in configs/ .  Adding parameters requires modifying config.py, adding new parameters' definition and initial values.
-
-# :robot: Adding a New Neural Algorithms
-
-* STEP 1: Define a model in a new python file in `neural_methods/model`, e.g. NewModel.py.
-
-* STEP 2: Implement the corresponding training/testing routines in a file `neural_methods/trainer`, e.g. NewModelTrainer.py. Ensure to implement the following functions:
-
-  ```python
-  def __init__(self, config, data_loader):
-  ```
-  ```python
-  def train(self, data_loader):
-  ```
-  ```python
-  def valid(self, data_loader):
-  ```
-
-  ```python
-  def test(self, data_loader)
-  ```
-
-  ```python
-  def save_model(index)
-  ```
-
-* STEP 3: Add logic to `main.py` to use the models in the following `train_and_test` and `test` functions. 
-
-* STEP 4: Create new yaml files in configs/ corresponding to the new algorithm.
-
-# :chart_with_upwards_trend: Adding a New Unsupervised Algorithms
-
-* STEP 1: Define a algorithm in a new python file in `unsupervised_methods/methods`, e.g. NewMethod.py.
-
-* STEP 2: Add logic to `main.py` to use the models in the following `unsupervised_method_inference` function. 
-
-* STEP 4: Create new yaml files in configs/ corresponding to the new algorithm.
-
-# :page_with_curl: Using Custom Data Splits and Custom File Lists
-
-Best practice for rPPG model evaluation involves training and validating a model on one dataset and then evaluating (testing) the performance on additional datasets (Eg. training on PURE and testing on UBFC). Data splits used for training, validation, and testing are saved as .csv filelists with the default directory path set as `CACHED_PATH/DataFileLists` (this are generally auto generated). In cases where users would like to define their own data splits (Eg. for intra-dataset cross validation), the following steps can be used to achieve this.  
-
-* STEP 1: Collect all file paths for the data splits's input files (An example file path would be of format `CACHED_PATH/PREPROCESSED_DATASET/*input*.npy`, eg. `405_input9.npy`). Ensure the corresponding `*label*.npy` files exists in the same directory as the input files.
-
-* STEP 2: Add all file paths to a .csv with column name `input_files`. We suggest creating a pandas dataframe and then saving this out to the csv. This .csv file is the file list for your custom data split. The file can be named anything as long as it has an .csv extension.
-
-* STEP 3: In the desired experiment config file, enter the file path of the .csv file list using keyword `FILE_LIST_PATH` in the `DATA` field of the desired train/valid/test split. The dataloader will load input and label files specified in this file path. 
 
 # :scroll: Citation
 If you find our [paper](https://arxiv.org/abs/2210.00716) or this toolbox useful for your research, please cite our work.
