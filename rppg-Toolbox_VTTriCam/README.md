@@ -93,7 +93,7 @@ Here are some explanation of parameters:
     
 
 # :scroll: Citation
-Please cite the following paper if you use the toolbox and <u>cite the corresponding papers for the datasets</u>.
+Please cite the following paper if you use the toolbox and **<u> cite the corresponding papers for the datasets </u>**.
 
 ```
 @article{liu2022rppg,
@@ -109,7 +109,4 @@ Please cite the following paper if you use the toolbox and <u>cite the correspon
   <img src="https://images.squarespace-cdn.com/content/v1/5c2a6d5c45776e85d1482a7e/1546750722018-T7QVBTM15DQMBJF6A62M/RAIL+Final.png" alt="License: Responsible AI" width="30%">
 </a>
 
-# Acknowledgement 
-
-This research project is supported by a Google PhD Fellowship for Xin Liu and a research grant from Cisco for the University of Washington as well as a career start-up funding grant from the Department of Computer Science at UNC Chapel Hill. This research is also supported by Tsinghua University Initiative Scientific Research Program, Beijing Natural Science Foundation,  and the Natural Science Foundation of China (NSFC). We also would like to acknowledge all the contributors from the open-source community. 
 
