@@ -13,7 +13,7 @@ VT-Tri-Cam-rPPG can be used in conjunction with the [rPPG-toolbox](https://githu
 
 < Add links and instructions for how to request access>
 
-# :computer: Please look in the `rppg-Toolbox_VTTriCam` directory for examples on how to use the dataset via the rPPG-Toolbox.
+:computer: Please look in the `rppg-Toolbox_VTTriCam` directory for examples on how to use the dataset via the rPPG-Toolbox.
 
 
 ## 📄 Citation
