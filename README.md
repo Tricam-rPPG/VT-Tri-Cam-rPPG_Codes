@@ -7,6 +7,19 @@ This paper introduces VT-Tricam-rPPG, a multimodal dataset designed to support s
 
 VT-Tri-Cam-rPPG can be used in conjunction with the [rPPG-toolbox](https://github.com/ubicomplab/rPPG-Toolbox).  
 
+# :file_folder: Dataset Structure
+    -----------------
+         data/VT-Tri-Cam-rPPG/
+         |   |-- PARTICIPANT301_S1_T1_850.mp4/
+         |   |-- PARTICIPANT301_S1_T1_940.mp4/
+         |   |-- PARTICIPANT301_S1_T1_RGB.mp4/
+         |   |-- PARTICIPANT301_S1_T2_850.mp4/
+         |   |-- PARTICIPANT301_S1_T2_940.mp4/
+         |   |-- PARTICIPANT301_S1_T2_RGB.mp4/
+         |   |-- PARTICIPANT301_S1_T1.csv/
+
+    -----------------
+
 
 ## 🗝️ Access and Usage
 **This dataset is built for academic use. Any commercial usage is banned.**  
