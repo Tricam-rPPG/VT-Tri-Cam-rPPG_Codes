@@ -15,3 +15,7 @@ VT-Tri-Cam-rPPG can be used in conjunction with the [rPPG-toolbox](https://githu
 
 
 ## 📄 Citation
+
+# Acknowledgement 
+The team would like to thank Fulan Li, Zeeshan karamat, Gayatri Bhatambarekar, Jin Woo Baik, Joe Bekiranov, Ayush Sadekar, Calvin Winkowski, Ryan Talbot for their support during the data collection. 
+This work was partially funded by National Science Foundation, and Commonwealth of Cyber Initiative at Virginia, USA. 
