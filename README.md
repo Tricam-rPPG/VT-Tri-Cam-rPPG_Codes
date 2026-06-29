@@ -1,4 +1,4 @@
-# VT-Tri-Cam-rPPG [ECCV 2026]
+# Tri-Cam-rPPG [ECCV 2026]
 
 ## 📖 Abstract
 
