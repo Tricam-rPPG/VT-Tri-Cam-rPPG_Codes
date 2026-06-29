@@ -46,4 +46,4 @@ INFERENCE:
   EVALUATION_WINDOW:
     USE_SMALLER_WINDOW: False        # Change this if you'd like an evaluation window smaller than the test video length
     WINDOW_SIZE: 10        # In seconds
-  MODEL_PATH: "./runs/exp/NSF_NSF_PURE_TSCAN_train_RGB/PreTrainedModels/NSF_NSF_PURE_TSCAN_Epoch300.pth" #NSF_NSF_PURE_TSCAN_Epoch351
+  MODEL_PATH: "./final_model_release/NSF_NSF_PURE_TSCAN.pth" #NSF_NSF_PURE_TSCAN_Epoch351
